@@ -18,7 +18,7 @@ localhost:3000
 <p>atau</p>
 
 ```
-127.0.0.1:3080
+127.0.0.1:3000
 ```
 <br>
 <b>Semoga Bermanfaat</b>
