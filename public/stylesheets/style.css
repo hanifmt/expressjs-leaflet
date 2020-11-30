@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: 30px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -7,6 +7,11 @@ a {
   color: #00B7FF;
 }
 
-#mapid { 
-  height: 500px; 
+html, body, #mapid {
+  height: 100%;
+}
+
+
+body > #sidebar {
+  display: none;
 }

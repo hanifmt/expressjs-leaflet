@@ -2,13 +2,30 @@ doctype html
 html
   head
     title= title
+
     link(rel='stylesheet', href='/stylesheets/style.css')
 
-
-    link(rel='stylesheet', href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css', integrity='sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==', crossorigin='')
+    //- link(rel='stylesheet', href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css', integrity='sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==', crossorigin='')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.toolbar.js/0.3.0/leaflet.toolbar.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.toolbar.js/0.3.0/leaflet.toolbar-src.css')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css')
+    link(rel='stylesheet', href='stylesheets/L.Control.Sidebar.css')
+    link(rel='stylesheet', type="text/css", href='/semantic-ui/semantic.min.css')
+
     
-    script(src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js', integrity='sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==', crossorigin='')
+    //- script(src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js', integrity='sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==', crossorigin='')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet-src.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.toolbar.js/0.3.0/leaflet.toolbar.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.toolbar.js/0.3.0/leaflet.toolbar-src.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js')
+    script(src='javascripts/L.Control.Sidebar.js')
+    script(src='javascripts/jquery-3.2.1.min.js')
+    script(src='semantic-ui/semantic.min.js')
+    
+    
   body
     block content

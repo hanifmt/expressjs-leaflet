@@ -1,0 +1,38 @@
+
+div.ui.top.attached.tabular.menu
+  each tabMenu in tabView.tabs
+    a.item(data-tab=tabMenu.key onclick="clickFunc('"+tabMenu.key+"',"+JSON.stringify(tabMenu.file)+","+JSON.stringify(tabMenu.data)+")")=tabMenu.name
+
+each tabSegment in tabView.tabs
+  div.ui.bottom.attached.tab.segment(data-tab=tabSegment.key id=tabSegment.key)
+
+script.
+    $('.tabular.menu .item').tab();
+    function clickFunc(key, file, data){
+      $("#"+key).empty();
+      $.ajax({
+        type: "POST",
+        url: '/tab',
+        data:{
+          file : file,
+          data : JSON.stringify(data),
+        },
+        beforeSend:function(jqXHR, settings){
+          $("#"+key).addClass("loading");
+        },
+        success:function(html){
+          $("#"+key).removeClass("loading").html(html);
+        },
+        error: function (xhr, textStatus, err) {
+          iziToast.destroy()
+          iziToast.error({
+            title: xhr.statusText,
+            message: xhr.responseText,
+            timeout: 4000
+          })
+        }
+      })
+    }
+    
+
+    
